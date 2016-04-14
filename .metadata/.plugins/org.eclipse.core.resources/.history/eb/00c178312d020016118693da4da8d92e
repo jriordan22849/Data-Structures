@@ -39,17 +39,5 @@ public class LinkedList {
 		ans = value.value;
 		return ans;
 	}
-	
-	public int sizeOfList() {
-		int size = 0;
-		Link sList = firstLink;
-		
-		while(sList != null) {
-			size ++;
-			sList = sList.next;
-		}
-		
-		return size;
-	}
 
 }
