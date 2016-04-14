@@ -1,0 +1,21 @@
+package ie.dit;
+
+public class Link {
+	int value;
+	
+	public Link firtsLink;
+	
+	public Link(int value) {
+		this.value = value;
+	}
+	
+	public void display() {
+		System.out.println(value +",");
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	
+}

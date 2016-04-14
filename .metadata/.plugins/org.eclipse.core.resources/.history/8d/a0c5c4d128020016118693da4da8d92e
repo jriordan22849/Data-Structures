@@ -1,0 +1,27 @@
+package ie.dit;
+
+public class LinkedList {
+	public Link firstLink;
+	
+	LinkedList() {
+		firstLink = null;
+	}
+	
+	public boolean isEmpty() {
+		return(firstLink == null);
+	}
+	
+	public void insertLink(int value) {
+		Link newLink = new Link(value);
+		newLink.next = firstLink;
+		firstLink = newLink;
+	}
+	
+	public void display() {
+		Link displaylink = firstLink;
+		while(displaylink != null) {
+			displaylink.display();
+			displaylink = displaylink.next;
+		}
+	}
+}

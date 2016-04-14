@@ -1,0 +1,17 @@
+package ie.dit;
+
+public class Link {
+	int value;
+	
+	public LinkedList firtsLink;
+	
+	public LinkedList(int value) {
+		this.value = value;
+	}
+	
+	public boolean isEmpty() {
+		return(firtsLink == null);
+	}
+	
+	
+}
