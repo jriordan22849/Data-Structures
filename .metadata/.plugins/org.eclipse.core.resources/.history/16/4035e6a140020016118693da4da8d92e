@@ -1,0 +1,43 @@
+package ie.dit;
+
+public class Stack {
+	int maxSize;
+	int top;
+	long stackArray[];
+	
+	public Stack() {
+		maxSize = 5;
+		stackArray = new long[maxSize];
+		top = -1;
+	}
+	
+	public void push(int x) {
+		stackArray[++ top] = x;
+	}
+	
+	public long pop() {
+		return stackArray[top --];
+	}
+	
+	public boolean isEmpty() {
+		return (top == -1);
+	}
+	public void display() {
+		Stack displayStack = new Stack();
+		
+		while(!displayStack.isEmpty()) {
+			long value = displayStack.pop();
+			System.out.println(value);
+		}
+	}
+	
+	public static void main(String[] args) {
+		Stack myStack = new Stack();
+		
+		for(int i = 0; i < 5; i ++) {
+			myStack.push(i);
+		}
+		
+//		myStack.display();
+	}
+}
