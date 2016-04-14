@@ -1,0 +1,12 @@
+package ie.dit;
+
+public class QueueMain {
+	public static void main(String[] args) {
+		Queue<Integer> myQueue = new Queue<Integer>();
+//		for(int i = 0; i < 5; i ++) {
+//			myQueue.enQueue(i);
+//		}
+		myQueue.enQueue(20);
+//		myQueue.display();
+	}
+}
