@@ -1,0 +1,45 @@
+package ie.dit;
+
+public class Duplicate {
+	static int[] myArray = new int[] {1,2,3,4,4,5};
+	static boolean run = true;
+	Duplicate() {
+		
+	}
+	
+	public static void main(String[] args) {
+		for(int i = 0; i < myArray.length; i ++) {
+				System.out.println(myArray[i]);
+		}
+		
+		if(run) {
+			checkDuplicate(myArray);
+			run = false;
+		}
+	}
+	
+	public static void checkDuplicate(int[] myArray) {
+		int count = 0;
+		int size = myArray.length;
+		int [] dup = new int[size] ;
+		for(int i = 0; i < size; i ++) {
+			
+			for(int j = 1; j < size; j ++) {
+				count = 0;
+				if(myArray[i] == myArray[j]) {
+					count = 1;
+					dup[i] += count;
+				}
+			}
+			
+			for(int index = 0; index < myArray.length; index ++) {
+				System.out.println("Duplicate: " + dup[index]);
+				if(dup[index] >= 2) {
+//					System.out.println("Duplicate: " + myArray[index]);
+//					break;
+				}
+			}
+		}
+	}
+}
+

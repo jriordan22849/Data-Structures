@@ -1,0 +1,25 @@
+package ie.dit;
+
+public class Link {
+	int value;
+	
+	public Link next;
+	
+	Link(int value) {
+		this.value = value;
+	}
+	
+	public void display() {
+		System.out.println("Value in list: ");
+	}
+	
+	public static void main(String[] args) {
+		LinkedList list = new LinkedList();
+		boolean empty = list.isEmpty();
+		
+		System.out.println("Is List empty: " + empty);
+		list.insertLink(10);
+		list.display();
+	}
+	
+}

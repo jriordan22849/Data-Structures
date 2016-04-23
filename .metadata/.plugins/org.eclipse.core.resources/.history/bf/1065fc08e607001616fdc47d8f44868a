@@ -1,0 +1,36 @@
+package ie.dit;
+
+public class Main {
+	public Link firstLink;
+	
+	Main() {
+		firstLink = null;
+	}
+	
+	public void insertLink(int value) {
+		Link newLink = new Link(value);
+		newLink.next = firstLink;
+		firstLink = newLink;
+	}
+	
+	public void removeLink(int value) {
+		Link deleteLink = firstLink;
+		while(deleteLink != null) {
+			if(deleteLink.data == value) {
+				deleteLink = deleteLink.next;
+				deleteLink.next = firstLink;
+			} else {
+				deleteLink = deleteLink.next;
+			}
+		}
+	}
+	
+	public void display() {
+		Link displayLink = firstLink;
+		while(displayLink != null) {
+			displayLink.display();
+			displayLink = displayLink.next;
+		}
+	}
+
+}

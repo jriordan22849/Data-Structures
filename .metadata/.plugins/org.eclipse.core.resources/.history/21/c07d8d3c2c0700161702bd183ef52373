@@ -1,0 +1,71 @@
+package ie.dit;
+
+public class Duplicate {
+	static int[] myArray = new int[] {1,1,3,3,4,5};
+	static boolean run = true;
+	static String myString = "hello";
+	Duplicate() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		checkDuplicate(myArray);
+		checkDuplicateCharacter(myString);
+
+	}
+	
+	public static void checkDuplicateCharacter(String myString) {
+		int size = myString.length();
+		char[] myChar = myString.toCharArray();
+		int[] myArray = new int[size];
+		int count = 1;
+		
+		for(int i = 0; i < myChar.length; i ++) {
+			System.out.println(myChar[i]);;
+		}
+		
+		for(int i = 0; i < myChar.length; i ++) {
+			for(int j = i + 1; j < myChar.length; j ++) {
+				if(myChar[i] == myChar[j]) {
+					myArray[i] += count;
+				}
+			}
+		}
+		
+		for(int i = 0; i < myArray.length; i ++) {
+			if(myArray[i] >= 1) {
+				System.out.println("Duplicate: " + myChar[i]);
+			}
+		}
+
+	}
+	
+	public static void checkDuplicate(int[] myArray) {
+		int count = 1;
+		int size = myArray.length;
+		System.out.println("size: " + size);
+		int [] dup = new int[size] ;
+		
+		for(int i = 0; i < myArray.length; i ++) {
+			System.out.println(myArray[i]);
+		}
+		
+		for(int i = 0; i < size; i ++) {
+			for(int j = i + 1; j < size; j ++) {
+				if(myArray[i] == myArray[j]) {
+					dup[i] += count;
+				}
+			}
+		}
+		
+		for(int k = 0; k < size; k ++) {
+			//System.out.println(dup[k]);
+			if(dup[k] >= 1) {
+				System.out.println("Duplicate " + myArray[k]);
+			}
+		}
+		
+	}
+}
+
